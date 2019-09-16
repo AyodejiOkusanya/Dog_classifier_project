@@ -71,7 +71,7 @@ def adjust_results4_isadog(results_dic, dogfile):
     
     with open(dogfile, 'r') as file:
         for line in file:
-            line = line.rstrip().replace(',','')
+            line = line.rstrip()
             if(dognames_dic.get(line)):
                 print("Warning: The '{}' key already exists".format(line))
             else:

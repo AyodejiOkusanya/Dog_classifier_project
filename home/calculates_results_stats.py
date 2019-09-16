@@ -96,8 +96,12 @@ def calculates_results_stats(results_dic):
             n_of_labels_matches += 1
     
     n_of_not_dog_images = n_of_images - n_of_dog_images
-    pct_correctly_classified_dog_images = (n_of_correct_dog_matches/n_of_dog_images)*100
-    
+
+    if n_of_dog_images > 0:
+            pct_correctly_classified_dog_images = (n_of_correct_dog_matches/n_of_dog_images)*100
+    else:
+        pct_correctly_classified_dog_images = 0
+
     if n_of_not_dog_images > 0:
         pct_correctly_classified_not_a_dog_images = (n_of_correct_non_dog_matches/n_of_not_dog_images)*100
     else:
