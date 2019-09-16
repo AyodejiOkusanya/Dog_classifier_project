@@ -1,0 +1,64 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = resnet 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:                     Dog_01.jpg  label:                        dog
+ 2 key:                     Dog_02.jpg  label:                        dog
+ 3 key:                 Giraffe_01.jpg  label:                    giraffe
+ 4 key:               Spiderman_01.jpg  label:                  spiderman
+
+     MATCH:
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier: german shepherd german shepherd dog german police dog alsatian
+
+ NOT A MATCH:
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier:              brabancon griffon
+
+                Giraffe_01.jpg: 
+Real:                    giraffe   Classifier:                   hyena hyaena
+
+              Spiderman_01.jpg: 
+Real:                  spiderman   Classifier:              balance beam beam
+
+# Total Images 4 # Matches: 1 # NOT Matches: 3
+
+     MATCH:
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier: german shepherd german shepherd dog german police dog alsatian  
+PetLabelDog: 1  ClassLabelDog: 1
+
+ NOT A MATCH:
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier:              brabancon griffon  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                Giraffe_01.jpg: 
+Real:                    giraffe   Classifier:                   hyena hyaena  
+PetLabelDog: 0  ClassLabelDog: 0
+
+              Spiderman_01.jpg: 
+Real:                  spiderman   Classifier:              balance beam beam  
+PetLabelDog: 0  ClassLabelDog: 0
+
+# Total Images 4 # Matches: 1 # NOT Matches: 3
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  50.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  50.0
+Number of Images: 4, Number of Dog Images: 2, Number of 'Not-a' Dog Images: 2
+100.0% of correct dogs. 50.0% of correct breed. 100.0% of correct not-a dog. 25.0% matches
+Missclassified dog breeds -- Pet Image: dog, Classifer Lablel: brabancon griffon
+
+** Total Elapsed Runtime: 0:0:0
